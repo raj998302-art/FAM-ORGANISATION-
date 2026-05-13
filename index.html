@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1" />
+
+    <!-- Primary Meta -->
+    <title>Fire Arena MAX — Free Fire Esports Tournament Platform</title>
+    <meta name="description" content="India's #1 Free Fire MAX Esports Platform. Join tournaments, win real cash prizes, compete with elite players. VIP memberships, live leaderboards, instant coin deposits."/>
+    <meta name="keywords" content="Free Fire tournament, Free Fire MAX, esports India, FAM, Fire Arena MAX, garena free fire, FF tournament, win prizes, esports platform"/>
+    <meta name="author" content="Fire Arena MAX"/>
+    <meta name="robots" content="index, follow"/>
+    <meta name="theme-color" content="#06b6d4"/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.ibb.co/39H03P4C/file-00000000b718720782db0e5073b7aac2.png"/>
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/icon-96.png"/>
+    <link rel="apple-touch-icon" href="https://i.ibb.co/39H03P4C/file-00000000b718720782db0e5073b7aac2.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://i.ibb.co/39H03P4C/file-00000000b718720782db0e5073b7aac2.png"/>
+
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta name="apple-mobile-web-app-title" content="Fire Arena MAX"/>
+    <meta name="application-name" content="Fire Arena MAX"/>
+    <meta name="msapplication-TileColor" content="#020617"/>
+    <meta name="msapplication-TileImage" content="/icons/icon-144.png"/>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://fire-arena-max-organisation.vercel.app/"/>
+    <meta property="og:title" content="Fire Arena MAX — Free Fire Esports Platform"/>
+    <meta property="og:description" content="Join India's #1 Free Fire MAX tournament platform. Compete, win prizes, and become a legend!"/>
+    <meta property="og:image" content="https://i.ibb.co/39H03P4C/file-00000000b718720782db0e5073b7aac2.png"/>
+    <meta property="og:image:width" content="512"/>
+    <meta property="og:image:height" content="512"/>
+    <meta property="og:image:alt" content="Fire Arena MAX Logo"/>
+    <meta property="og:site_name" content="Fire Arena MAX"/>
+    <meta property="og:locale" content="en_IN"/>
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image"/>
+    <meta name="twitter:title" content="Fire Arena MAX — Free Fire Esports"/>
+    <meta name="twitter:description" content="India's #1 Free Fire MAX Tournament Platform"/>
+    <meta name="twitter:image" content="https://i.ibb.co/39H03P4C/file-00000000b718720782db0e5073b7aac2.png"/>
+    <meta name="twitter:image:alt" content="Fire Arena MAX — Free Fire Tournament Platform"/>
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "Fire Arena MAX",
+      "alternateName": "FAM",
+      "url": "https://fire-arena-max-organisation.vercel.app",
+      "logo": "https://i.ibb.co/39H03P4C/file-00000000b718720782db0e5073b7aac2.png",
+      "description": "India's #1 Free Fire MAX Esports Tournament Platform",
+      "sport": "Esports",
+      "sameAs": []
+    }
+    </script>
+
+    <!-- Preload key font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+
+    <style>
+      /* Prevent flash of white */
+      html, body { background: #020617; margin: 0; padding: 0; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Register Service Worker
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then(r => console.log('[SW] Registered:', r.scope))
+            .catch(e => console.log('[SW] Failed:', e));
+        });
+      }
+    </script>
+  </body>
+</html>
